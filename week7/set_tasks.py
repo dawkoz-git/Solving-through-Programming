@@ -47,8 +47,8 @@ def run_task3():
         tup = (i, observations.count(i))
         observation_set.add(tup)
 
-    for let, dig in observation_set:
-        print(f"{let} has been observed {dig} time(s).")
+    for i in sorted(observation_set):
+        print(f"{i[0]} has been observed {i[1]} time(s).")
 
 
 run_task3()
