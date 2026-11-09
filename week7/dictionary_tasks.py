@@ -1,28 +1,31 @@
-def pattern():
-    sequence = {"Short sequence": 3, "Medium sequence": 2, "Long sequence": 1}
-    return sequence
+def short_pattern():
+    pattern = {"sequence": "101", "occurences": 5}
+    return pattern
 
 
-def display_keys(data):
-    for key in data.keys():
-        print(key)
+def medium_pattern():
+    pattern = {"sequence": "111000", "occurences": 25}
+    return pattern
 
 
-def display_values(data):
-    for i in data.values():
-        print(i)
+def long_pattern():
+    pattern = {"sequence": "1100110011001100", "occurences": 50}
+    return pattern
 
 
-def display_items(data):
-    for i in data.items():
-        print(i)
+def run_task():
+
+    print("Analysing patterns...")
+    patterns = {
+        "short_pattern": short_pattern(),
+        "medium_pattern": medium_pattern(),
+        "long_pattern": long_pattern(),
+    }
+
+    for key, value in patterns.items():
+        print(f"{key}: {value}")
 
 
-def run():
-    data = pattern()
-    display_keys(data)
-    display_values(data)
-    display_items(data)
+run_task()
 
 
-run()
