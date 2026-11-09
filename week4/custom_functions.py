@@ -78,14 +78,74 @@ def calc_avg_weight(weight_char, weight_inv):
 
 
 def run():
-    char = int(input("What is the character's weight?"))
-    inv = int(input("What is the inventory's weight?"))
+    char = int(input("What is the character's weight? (kg)"))
+    inv = int(input("What is the inventory's weight? (kg)"))
 
-    avg_sum = input("Do you want the average weight, or the sum weight (average, sum")
+    avg_sum = input("Do you want the average weight, or the sum weight (average, sum)")
     if avg_sum == "average":
         print(f"The average weight is {calc_avg_weight(char, inv)} kg.")
     else:
         print(f"The sum weight is {sum_weights(char, inv)} kg.")
 
 
-run()
+# run()
+
+def in_ascii(word):
+    num_dashes = 4 + len(word)
+    print("-" * num_dashes)
+    print(f"| {word} |")
+    print("-" * num_dashes)
+
+
+def lower(word):
+    print(f"{word.lower()}")
+
+
+def upper(word):
+    print(f"{word.upper()}")
+
+
+def reverse(word):
+    reversal = ""
+    for letter in word:
+        reversal = letter + reversal
+
+    print(reversal)
+
+
+def repeat(word):
+    repeats = int(input("How many times to display the word?: "))
+    for i in range(repeats):
+        if i % 2 == 0:
+            print(f"{word.lower()}")
+        else:
+            print(f"{word.upper()}")
+
+
+prompt_word = input("Please enter a word: ")
+
+print("Please pick one of the following options:")
+print("""
+1) Display in a box - display the word in an ASCII art box
+2) Display lowercase - display the word in lowercase.
+3) Display uppercase - display the word in uppercase. 
+4) Display mirrored - display the word in reverse.
+5) Repeat - ask the user how many times to display a word, alternate that in upper/lowercase.     
+      """)
+
+response = int(input())
+
+if response == 1:
+    in_ascii(prompt_word)
+elif response == 2:
+    lower(prompt_word)
+elif response == 3:
+    upper(prompt_word)
+elif response == 4:
+    reverse(prompt_word)
+elif response == 5:
+    repeat(prompt_word)
+else:
+    print("Invalid number!")
+
+
