@@ -21,5 +21,24 @@ def run():
     read("futurama.json")
 
 
-if __name__ == "__main__":
-    run()
+def read_task2(file_path):
+    print("Reading...")
+    with open(file_path) as f:
+        data = json.load(f)
+    print("Done!")
+    return data
+
+
+def save(file_path, data_saving):
+    print("Exporting...")
+    with open(file_path, "w") as f:
+        json.dump(data_saving, f, indent=4)
+        print("Done!")
+
+
+def run_task():
+    json_data = read_task2("futurama.json")
+    save("exported.json", json_data)
+
+
+run_task()
