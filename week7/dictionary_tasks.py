@@ -3,9 +3,26 @@ def pattern():
     return sequence
 
 
-def run_task1():
-    pattern()
-    print(pattern())
+def display_keys(data):
+    for key in data.keys():
+        print(key)
 
 
-run_task1()
+def display_values(data):
+    for i in data.values():
+        print(i)
+
+
+def display_items(data):
+    for i in data.items():
+        print(i)
+
+
+def run():
+    data = pattern()
+    display_keys(data)
+    display_values(data)
+    display_items(data)
+
+
+run()
