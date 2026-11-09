@@ -51,5 +51,18 @@ def climb_ladder(steps_left, steps_crossed):
         print("We are almost there!")
 
 
-climb_ladder(5, 2)
-climb_ladder(2, 5)
+# climb_ladder(5, 2)
+# climb_ladder(2, 5)
+
+def display_ladder(steps):
+    for i in range(steps):
+        print("| |")
+        print("***")
+
+
+def create_ladder():
+    steps = int(input("How many steps remain? "))
+    display_ladder(steps)
+
+
+# create_ladder()
