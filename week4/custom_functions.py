@@ -36,10 +36,20 @@ def cross_bridge(distance_steps):
         print("Crossed step.")
 
     if distance_steps > 5:
-        print("The bridge is collapsing!")
+         print("The bridge is collapsing!")
     else:
         print("We must keep going!")
 
 
-cross_bridge(3)
-cross_bridge(6)
+# cross_bridge(3)
+# cross_bridge(6)
+
+def climb_ladder(steps_left, steps_crossed):
+    if steps_left > steps_crossed:
+        print("Still some way to go!")
+    else:
+        print("We are almost there!")
+
+
+climb_ladder(5, 2)
+climb_ladder(2, 5)
