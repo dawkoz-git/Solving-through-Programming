@@ -9,7 +9,7 @@ def run_task1():
 
 def observed_items():
     observations = []
-    for items in range(7):
+    for items in range(5):
         observations.append(input("Please enter your observation: "))
     return observations
 
@@ -27,4 +27,28 @@ def run_task2():
         print(f"{let} has been observed {dig} time(s).")
 
 
-run_task2()
+def remove_observations(observations):
+    print("Do you wish to remove an observation?")
+    answer = input("Yes or no?")
+
+    while answer == "yes":
+        removal = input("What observation would you like to remove?")
+        observations.remove(removal)
+        print("All done!")
+        answer = input("Would you like to remove another?")
+
+
+def run_task3():
+    observations = observed_items()
+    remove_observations(observations)
+
+    observation_set = set()
+    for i in observations:
+        tup = (i, observations.count(i))
+        observation_set.add(tup)
+
+    for let, dig in observation_set:
+        print(f"{let} has been observed {dig} time(s).")
+
+
+run_task3()
