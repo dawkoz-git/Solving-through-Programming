@@ -24,4 +24,18 @@ def run_task2():
     print(f"{movement[6]} for {movement[7]} steps.")
 
 
-run_task2()
+# run_task2()
+
+def menu():
+    print("Please select a direction.")
+    direction = directions()
+
+    for i in range(len(direction)):
+        print(f"{i}: {direction[i]}")
+
+
+def run_task3():
+    menu()
+
+
+run_task3()
