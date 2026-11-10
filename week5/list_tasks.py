@@ -7,4 +7,4 @@ def run_task1():
     print(f"{directions()}")
 
 
-run_task1()
+# run_task1()
