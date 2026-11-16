@@ -42,4 +42,32 @@ def run_task2():
     plt.show()
 
 
-run_task2()
+# run_task2()
+
+def coordinate():
+    x = int(input("Please enter an X value (int)."))
+    y = int(input("Please enter a Y value (int)."))
+    return x, y
+
+
+def path():
+    print("Retrieving path...")
+    x_values = []
+    y_values = []
+
+    for i in range(4):
+        data = coordinate()
+        x_values.append(data[0])
+        y_values.append(data[1])
+
+    return [x_values, y_values]
+
+
+def run_task3():
+    values = path()
+    plt.labels = "x values", "y values"
+    plt.plot(values[0], values[1], "r--o")
+    plt.show()
+
+
+run_task3()
