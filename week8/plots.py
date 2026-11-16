@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import random
 
 
 def display_line(x, y):
@@ -70,4 +71,43 @@ def run_task3():
     plt.show()
 
 
-run_task3()
+# run_task3()
+
+def data():
+    paths = {}
+    print("What type of line would you like? (:, --, or -)")
+    line_type = input()
+
+    print("What color would you like? (r, g, or b)")
+    color = input()
+
+    print("What style of marker would you like? (o, s, or ^)")
+    style = input()
+
+    paths["Line type"] = line_type
+    paths["Color"] = color
+    paths["Style"] = style
+
+    return paths
+
+
+def generate():
+    no_of_lines = int(input("How many lines would you like to display?: "))
+
+    for i in range(no_of_lines):
+        values = data()
+        x = random.randint(1, 100)
+        y = random.randint(1, 100)
+
+        format =
+        plt.plot(x, y, values)
+        plt.show()
+
+
+def run_task4():
+    print("Running...")
+    generate()
+    print("Done!")
+
+
+run_task4()
