@@ -10,6 +10,19 @@ class Human:
     def display(self):
         print(f"I am {self.name}.")
 
+    def grow(self):
+        self.age += 1
+
+    def eat(self, amount):
+        self.energy += amount
+        if self.energy + amount > 100:
+            self.energy = human.MAX_ENERGY
+
+    def move(self, distance):
+        self.energy -= distance
+        if self.energy - distance < 0:
+            self.energy = 0
+
     def __repr__(self):
         return f"human(name={self.name}, age={self.age}, energy={self.energy})"
 
@@ -19,5 +32,7 @@ class Human:
 
 if __name__ == "__main__":
     human = Human()
-    human.display()
-    print(str(human))
+    human.grow()
+    human.eat(10)
+    human.move(10)
+    print(repr(human))
