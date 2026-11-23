@@ -99,7 +99,6 @@ def generate():
         x = random.randint(1, 100)
         y = random.randint(1, 100)
 
-        format =
         plt.plot(x, y, values)
         plt.show()
 
